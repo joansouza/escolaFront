@@ -1,5 +1,6 @@
 import stlyled, { createGlobalStyle } from 'styled-components';
 import * as S from '../config/colors';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
 *{
@@ -34,7 +35,18 @@ a{
 ul{
   list-style: none;
 }
-
+body .Toastify .Toastify__toast-container .Toastify__toast--success{
+background:${S.successColor};
+color: #D6F9FF;
+}
+body .Toastify .Toastify__toast-container .Toastify__toast--error{
+background:${S.errorColor};
+color: #D6F9FF;
+}
+body .Toastify .Toastify__toast-container .Toastify__toast--warning{
+background:${S.warningColor};
+color: #D6F9FF;
+}
 `;
 
 export const Container = stlyled.section`
